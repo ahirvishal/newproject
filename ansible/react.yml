@@ -1,0 +1,10 @@
+--- 
+ - hosts: all
+   tasks: 
+       - yum:
+            name: mysql
+            state: latest
+       - name: start
+         service:
+                  name: mysql
+                  state: restarted
